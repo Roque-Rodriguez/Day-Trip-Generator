@@ -15,7 +15,7 @@ entertainment = random.choice(entertainment_list)
 
 # Makes a first Generic Proposol for trip
 
-generated_trip = (f" For this trip we have picked that you should land in {destination}, go eat at this delicious resturant {resturant}, all while getting to your entertainment on a {transportation} to enjoy {entertainment}")
+generated_trip = (f" For this trip we have picked that you should land in {destination}, go eat at this delicious resturant called {resturant}, all while getting to your entertainment on a {transportation} to enjoy some {entertainment}")
 
 print(generated_trip)
 
@@ -25,22 +25,46 @@ satified = (input("Are you satified with the choices? Press y for yes or n for n
 if satified == "n":
     change = input("Which would you like to change? d for Destination, r for resturant, t for transportation, e for entertainment, or a for all?")
     if change == "d":
-        destination = random.choice(destination_list)
-        print(f"Your new destination is {destination}")
+        new_destination = random.choice(destination_list)
+        print(f"Destination: {new_destination}")
+        print(f"Resturant: {resturant}") 
+        print(f"Transportation: {transportation}")
+        print(f"Entertainment: {entertainment}") 
+        satified = (input("Are you satified with the choices? Press y for yes or n for no "))
     if change == "r":
-        resturant = random.choice(restaurant_list)
-        print(f"Your new resturant of choice is {resturant}")
+        new_resturant = random.choice(restaurant_list)
+        print(f"Destination: {destination}")
+        print(f"Resturant: {new_resturant}")
+        print(f"Transportation: {transportation}")
+        print(f"Entertainment: {entertainment}")
+        satified = (input("Are you satified with the choices? Press y for yes or n for no "))
     if change == "t":
-        transportation = random.choice(transportation_list)
-        print(f"Your new form of transportation is {transportation}")
+        new_transportation = random.choice(transportation_list)
+        print(f"Destination: {destination}")
+        print(f"Resturant: {resturant}")
+        print(f"Transportation: {new_transportation}")
+        print(f"Entertainment: {entertainment}")
+        satified = ( input("Are you satified with the choices? Press y for yes or n for no "))
     if change == "e":
-        entertainment = random.choice(entertainment_list)
-        print(f"Please enjoy your new form of entertainment: {entertainment}")
+        new_entertainment = random.choice(entertainment_list)
+        print(f"Destination: {destination}")
+        print(f"Resturant: {resturant}")
+        print(f"Transportation: {transportation}")
+        print(f"Entertainment: {new_entertainment}")
+        satified = (input("Are you satified with the choices? Press y for yes or n for no "))
     if change == "a":
-        print(f"Please enjoy your new trip {generated_trip}")
-    
+        new_destination = random.choice(destination_list)
+        new_resturant = random.choice(restaurant_list)
+        new_transportation = random.choice(transportation_list)
+        new_entertainment = random.choice(entertainment_list)
+        print(f"Destination: {new_destination}")
+        print(f"Resturant: {new_resturant}")
+        print(f"Transportation: {new_transportation}")
+        print(f"Entertainment: {new_entertainment}")
+        satified = (input("Are you satified with the choices? Press y for yes or n for no "))
 
-
+if satified == "y":
+    print("please enjoy your day!!!")
 
     
 
